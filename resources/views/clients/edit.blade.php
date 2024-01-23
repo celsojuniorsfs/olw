@@ -13,14 +13,16 @@
                 <!-- Name -->
                 <div>
                     <x-input-label for="name" :value="__('Name')" />
-                    <x-text-input id="name" class="block w-full mt-1" type="text" name="name" :value="$client->user->name ?? old('name')" required autofocus />
+                    <x-text-input id="name" class="block w-full mt-1" type="text" name="name" :value="$client->user->name ?? old('name')"
+                        required autofocus />
                     <x-input-error :messages="$errors->get('name')" class="mt-2" />
                 </div>
 
                 <!-- Email Address -->
                 <div class="mt-4">
                     <x-input-label for="email" :value="__('Email')" />
-                    <x-text-input id="email" class="block w-full mt-1" type="email" name="email" :value="$client->user->email ?? old('email')" required />
+                    <x-text-input id="email" class="block w-full mt-1" type="email" name="email"
+                        :value="$client->user->email ?? old('email')" required />
                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
                 </div>
 
